@@ -16,7 +16,8 @@ Route::get('/dashboard', function () {
 
 Route::middleware(['auth', 'verified'])->group(function (){
     Route::get('/dashboard', [ApplicationController::class, 'index'])->name('dashboard');
-    Route::get('/create', [ApplicationController::class, 'create'])->name('application.create');
+    Route::get('/add-application', [ApplicationController::class, 'create'])->name('application.create');
+    Route::post('/add-application', [ApplicationController::class, 'store'])->name('application.store');
 });
 
 Route::middleware('auth')->group(function () {
