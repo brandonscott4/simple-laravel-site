@@ -16,15 +16,12 @@
                 @foreach($applications as $application)
                 <div class="border border-black p-4 rounded-xl bg-white">
                     <div class="flex flex-col md:flex-row md:justify-between mb-4 md:mb-2">
-                        <div class="flex gap-2">
-                            <h3><a href="{{$application->link}}" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:underline text-lg">{{$application->job_title}}</a></h3>
-                            <p class="text-lg font-medium">- {{$application->company}}</p>
-                        </div>
+                        <h3><a href="{{$application->link}}" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:underline text-lg">{{$application->job_title}} - {{$application->company}}</a></h3>
                         <p class="rounded-3xl bg-gray-200 px-2 w-24 text-center mt-1 md:mt-0">{{$application->status}}</p>
                     </div>
-                    <p>{{$application->location}}</p>
-                    <p>{{$application->date_applied}}</p>
-                    <p>{{$application->note}}</p>
+                    <p>Location: <b>{{$application->location}}</b></p>
+                    <p>Date Applied: <b>{{$application->date_applied}}</b></p>
+                    <p>Note: <b>{{$application->note}}</b></p>
 
                     <div class="flex mt-8">
                         <a href="{{route('application.edit', $application)}}">
