@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="flex-1 m-2 py-12 px-2 rounded bg-white bg-opacity-75 shadow-md border border-red-100 shadow-red-200">
                                     <h2 class="text-black text-2xl">Edit</h2>
-                                    <p >If you have received feedback, a result or you just want to add a note, this can all be done with the edit feature.</p>
+                                    <p >If you have received a result or you just want to add a note, this can all be done with the edit feature.</p>
                                 </div>
                                 <div class="flex-1 m-2 py-12 px-2 rounded bg-white bg-opacity-75 shadow-md border border-red-100 shadow-red-200">
                                     <h2 class="text-black text-2xl">Delete</h2>
