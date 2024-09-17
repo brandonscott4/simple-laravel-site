@@ -10,7 +10,7 @@ use Illuminate\Http\RedirectResponse;
 class ApplicationController extends Controller
 {
     public function index(){
-        $applications = auth()->user()->applications;
+        $applications = auth()->user()->applications()->paginate(5);
         return view('dashboard', ['applications' => $applications]);
     }
 
