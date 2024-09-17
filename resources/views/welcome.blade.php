@@ -59,15 +59,15 @@
                                 <p class="text-xl mt-2">All your job applications in one place, ready for you to review and keep yourself organised.</p>
                             </div>
                             <div class="flex w-full mt-12 flex-col md:flex-row">
-                                <div class="flex-1 m-2 py-12 px-2 rounded bg-white bg-opacity-75 shadow-md border border-red-100">
+                                <div class="flex-1 m-2 py-12 px-2 rounded bg-white bg-opacity-75 shadow-md border border-red-100 shadow-red-200">
                                     <h2 class="text-black text-2xl">Create</h2>
                                     <p>Jobs that you have recently applied to can be added and tracked with ease.</p>
                                 </div>
-                                <div class="flex-1 m-2 py-12 px-2 rounded bg-white bg-opacity-75 shadow-md border border-red-100">
+                                <div class="flex-1 m-2 py-12 px-2 rounded bg-white bg-opacity-75 shadow-md border border-red-100 shadow-red-200">
                                     <h2 class="text-black text-2xl">Edit</h2>
                                     <p >If you have received feedback, a result or you just want to add a note, this can all be done with the edit feature.</p>
                                 </div>
-                                <div class="flex-1 m-2 py-12 px-2 rounded bg-white bg-opacity-75 shadow-md border border-red-100">
+                                <div class="flex-1 m-2 py-12 px-2 rounded bg-white bg-opacity-75 shadow-md border border-red-100 shadow-red-200">
                                     <h2 class="text-black text-2xl">Delete</h2>
                                     <p>If you no longer want to track an application, you can remove it with the click of a button.</p>
                                 </div>
