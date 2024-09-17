@@ -25,10 +25,14 @@
                     <p>{{$application->location}}</p>
                     <p>{{$application->date_applied}}</p>
                     <p>{{$application->note}}</p>
-                    
-                    <div class="mt-8">
+
+                    <div class="flex mt-8">
                         <button class="border border-black w-24 rounded hover:bg-yellow-100 p-2 mr-3">Edit</button>
-                        <button class="border border-black w-24 rounded hover:bg-red-100 p-2">Delete</button>
+                        <form action="{{route('application.destroy', $application)}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="border border-black w-24 rounded hover:bg-red-100 p-2">Delete</button>
+                        </form>
                     </div>
                 </div>
 

@@ -34,4 +34,10 @@ class ApplicationController extends Controller
 
         return redirect('/dashboard');
     }
+
+    public function destroy(Application $application){
+        $application->delete();
+
+        return redirect('/dashboard');
+    }
 }
