@@ -18,6 +18,8 @@ Route::middleware(['auth', 'verified'])->group(function (){
     Route::get('/dashboard', [ApplicationController::class, 'index'])->name('dashboard');
     Route::get('/add-application', [ApplicationController::class, 'create'])->name('application.create');
     Route::post('/add-application', [ApplicationController::class, 'store'])->name('application.store');
+    Route::get('/edit-application/{application}', [ApplicationController::class, 'edit'])->name('application.edit');
+    Route::put('/edit-application/{application}', [ApplicationController::class, 'update'])->name('application.update');
     Route::delete('/delete-application/{application}', [ApplicationController::class, 'destroy'])->name('application.destroy');
 });
 

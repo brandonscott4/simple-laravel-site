@@ -17,7 +17,7 @@
                     <label for="location">Location</label>
                     <input type="text" name="location" placeholder="London" class="mb-4">
                     <label for="link">Link*</label>
-                    <input type="text" name="link" placeholder="www.uk.indeed.com/jobexample" class="mb-4" required>
+                    <input type="text" name="link" placeholder="https://uk.indeed.com/jobexample" class="mb-4" required>
                     <div class="flex flex-col md:flex-row gap-0 md:gap-8">
                         <div class="flex flex-col">
                             <label for="status">Status*</label>

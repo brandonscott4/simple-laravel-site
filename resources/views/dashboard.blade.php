@@ -27,7 +27,9 @@
                     <p>{{$application->note}}</p>
 
                     <div class="flex mt-8">
-                        <button class="border border-black w-24 rounded hover:bg-yellow-100 p-2 mr-3">Edit</button>
+                        <a href="{{route('application.edit', $application)}}">
+                            <button class="border border-black w-24 rounded hover:bg-yellow-100 p-2 mr-3">Edit</button>
+                        </a>
                         <form action="{{route('application.destroy', $application)}}" method="POST">
                             @csrf
                             @method('DELETE')

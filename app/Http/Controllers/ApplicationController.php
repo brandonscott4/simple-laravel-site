@@ -35,7 +35,40 @@ class ApplicationController extends Controller
         return redirect('/dashboard');
     }
 
+    public function edit(Application $application){
+        if($application->user_id !== request()->user()->id){
+            abort(403);
+        }
+
+        return view('application.edit', ['application' => $application]);
+    }
+
+    public function update(Request $request, Application $application){
+
+        if($application->user_id !== $request->user()->id){
+            abort(403);
+        }
+
+        $validated = $request->validate([
+            'job_title' => ['required', 'string'],
+            'company' => ['nullable', 'string'],
+            'location' => ['nullable', 'string'],
+            'link' => ['required', 'string'],
+            'status' => ['required', 'string'],
+            'date_applied' => ['required', 'date'],
+            'note' => ['nullable', 'string'],
+        ]);
+
+        $application->update($validated);
+
+        return redirect('/dashboard');
+    }
+
     public function destroy(Application $application){
+        if($application->user_id !== request()->user()->id){
+            abort(403);
+        }
+
         $application->delete();
 
         return redirect('/dashboard');
